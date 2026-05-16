@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heidy's English Learning Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.8;
+    }
+
+    header{
+      height:100vh;
+      background:linear-gradient(rgba(15,23,42,.7), rgba(15,23,42,.9)),
+      url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      color:#f8fafc;
+    }
+
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      font-size:1.2rem;
+      color:#cbd5e1;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      background:#111827;
+      padding:18px;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,.4);
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.8rem;
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:.4s;
+      box-shadow:0 10px 20px rgba(0,0,0,.3);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:25px;
+    }
+
+    .card-content h3{
+      margin-bottom:15px;
+      color:#f8fafc;
+      font-size:1.6rem;
+    }
+
+    .card-content p{
+      color:#cbd5e1;
+      margin-bottom:15px;
+    }
+
+    .highlight{
+      color:#38bdf8;
+      font-weight:600;
+    }
+
+    .blog-post{
+      background:#111827;
+      border-radius:25px;
+      padding:40px;
+      margin-top:40px;
+      box-shadow:0 10px 20px rgba(0,0,0,.3);
+    }
+
+    .blog-post img{
+      width:100%;
+      border-radius:20px;
+      margin:25px 0;
+    }
+
+    .quote{
+      background:#1e293b;
+      padding:25px;
+      border-left:5px solid #38bdf8;
+      border-radius:10px;
+      margin:30px 0;
+      font-style:italic;
+      color:#e2e8f0;
+    }
+
+    footer{
+      background:#020617;
+      text-align:center;
+      padding:40px 20px;
+      color:#94a3b8;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      background:#38bdf8;
+      color:#0f172a;
+      padding:12px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:white;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:2.7rem;
+      }
+
+      .section-title h2{
+        font-size:2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div style="position:fixed;width:220px;height:220px;background:#38bdf8;border-radius:50%;filter:blur(120px);top:-60px;left:-60px;opacity:.3;z-index:-1;"></div>
+<div style="position:fixed;width:240px;height:240px;background:#a855f7;border-radius:50%;filter:blur(120px);bottom:-80px;right:-80px;opacity:.3;z-index:-1;"></div>
+
+  <header>
+    <div class="hero">
+      <h1>Heidy's English Blog</h1>
+      <p>
+        A creative and educational blog where I share my experiences learning English through family, hobbies, technology, culture, and critical thinking. This space reflects my personal interests and academic growth.
+      </p>
+      <a href="#posts" class="btn">Explore Blog</a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#culture">Cultural Literacy</a></li>
+      <li><a href="#crime">Crime & Punishment</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About the Author</h2>
+      <p>Personal reflections and English learning experiences.</p>
+    </div>
+
+    <div class="blog-post" style="text-align:center;">
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" alt="Author" style="width:220px;height:220px;border-radius:50%;object-fit:cover;border:5px solid #38bdf8;">
+
+      <h3 style="margin-top:20px;">Heidy Arismendy</h3>
+      <p>
+        English Competence Blog | Cultural Literacy and Critical Thinking
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>👨‍👩‍👧 My Family</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1600&auto=format&fit=crop" alt="Family" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        Family is the first environment where we learn values, communication, and emotional support.
+        My family is very important because they motivate me to continue growing personally and academically.
+      </p>
+
+      <p>
+        My mother is a caring person <strong>who always encourages me</strong> to achieve my goals.
+        Spending time with my relatives helps me feel happy and supported.
+      </p>
+
+      <p>
+        Talking about family in English allows me to practice vocabulary and express feelings naturally.
+        It also helps me connect with people <strong>who value strong family relationships</strong>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>🎵 Hobbies and Interests</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1600&auto=format&fit=crop" alt="Hobbies" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        My hobbies are activities that represent my personality and help me reduce stress.
+        I enjoy listening to music, exploring technology, watching movies, and learning new creative skills.
+      </p>
+
+      <p>
+        Music is something <strong>that inspires me every day</strong> because it helps me relax and improve my mood.
+        I also enjoy reading articles and discovering interesting ideas online.
+      </p>
+
+      <p>
+        Writing about hobbies in English improves my confidence and allows me to communicate my opinions more clearly.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>💻 Work and Projects</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop" alt="Programming" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        I am currently studying software development, a field that combines creativity, logic, and innovation.
+        English has become an essential tool because most programming resources and documentation are written in this language.
+      </p>
+
+      <p>
+        Through my projects, I have learned about web design, UML diagrams, and problem-solving strategies.
+        Developers <strong>who understand English</strong> can access global opportunities and modern technologies.
+      </p>
+
+      <p>
+        Technology motivates me to continue learning and improving my professional future.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>✈️ Trips and Experiences</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Travel" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        Traveling is an opportunity to discover cultures, traditions, and new ways of thinking.
+        I would love to visit countries where I can practice English and learn about international lifestyles.
+      </p>
+
+      <p>
+        Last year I visited Bogotá, a city <strong>that has important cultural places</strong> and beautiful museums.
+        Experiences like these help me become more open-minded and independent.
+      </p>
+
+      <p>
+        English allows me to communicate with tourists and share experiences with people from different countries.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>📰 Current Events</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1600&auto=format&fit=crop" alt="News" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        Technology is changing the world quickly, especially through artificial intelligence, social media, and digital communication.
+        Today, people receive information instantly from online platforms.
+      </p>
+
+      <p>
+        Current events are important because they help students understand social and technological changes.
+        Citizens <strong>who stay informed</strong> can participate more actively in society.
+      </p>
+
+      <p>
+        English allows me to discuss global issues and understand international information sources.
+      </p>
+    </div>
+  </section>
+
+  <section id="culture">
+    <div class="section-title">
+      <h2>🧠 Critical Thinking and Media Literacy</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop" alt="Critical Thinking" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        Critical thinking and media literacy are essential skills in modern society.
+        In the digital age, people receive a large amount of information every day through social networks and online media.
+      </p>
+
+      <p>
+        Critical thinking helps individuals identify fake news and avoid manipulation.
+        Students <strong>who analyze information carefully</strong> can make responsible decisions and understand reality better.
+      </p>
+
+      <div class="quote">
+        “Media literacy helps people become more conscious and informed citizens.”
+      </div>
+
+      <p>
+        Media literacy also teaches how to verify sources, question media messages, and understand digital platforms.
+        These abilities are important in a world where information has enormous influence.
+      </p>
+    </div>
+
+      <p>
+        These skills are essential because modern society depends heavily on digital information and communication.
+      </p>
+    </div>
+  </section>
+
+  <section id="crime">
+    <div class="section-title">
+      <h2>⚖️ Crime and Punishment</h2>
+    </div>
+
+    <div class="blog-post">
+      <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1600&auto=format&fit=crop" alt="Justice" style="width:100%;border-radius:20px;margin-bottom:25px;">
+
+      <p>
+        Crime and punishment are complex issues that affect societies around the world.
+        Crime creates fear, insecurity, and social problems that impact communities and families.
+      </p>
+
+      <p>
+        Punishment is necessary to maintain justice and social order, but it must also respect human rights.
+        Governments <strong>that promote fair justice systems</strong> help societies become safer and more organized.
+      </p>
+
+      <p>
+        The novel <em>Crime and Punishment</em> by Fyodor Dostoevsky explores guilt, morality, and personal responsibility.
+        The main character is a student <strong>who commits a crime</strong> and experiences emotional suffering because of his decisions.
+      </p>
+
+      <div class="quote">
+        “Justice should not only punish crime, but also encourage reflection and rehabilitation.”
+      </div>
+
+      <p>
+        Reflecting on crime and punishment helps students discuss ethics, society, and human behavior while practicing English vocabulary and communication skills.
+      </p>
+    </div>
+
+      <p>
+        Reflecting on justice and ethics helps people understand the importance of responsibility and empathy in society.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created for GA4-240202501-AA1-EV03 | English Competence Project 2026</p>
+  </footer>
+
+</body>
+</html>
